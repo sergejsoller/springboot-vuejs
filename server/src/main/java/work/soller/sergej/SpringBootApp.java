@@ -23,14 +23,12 @@ package work.soller.sergej;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import work.soller.sergej.config.SpringBootConfig;
 
-@Configuration
-@EnableAutoConfiguration
+@SpringBootApplication
 @Import(SpringBootConfig.class)
 public class SpringBootApp {
     public static void main(String[] args) {

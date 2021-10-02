@@ -23,21 +23,13 @@ package work.soller.sergej.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import work.soller.sergej.SpringBootRunner;
-import work.soller.sergej.controller.HelloController;
 
-@EnableWebMvc
 @Configuration
 public class SpringBootConfig {
 
     @Bean
     public SpringBootRunner springBootRunner() {
         return new SpringBootRunner();
-    }
-
-    @Bean
-    public HelloController helloController() {
-        return new HelloController();
     }
 }

@@ -21,6 +21,8 @@
 
 package work.soller.sergej.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,9 +33,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/api/say")
 public class HelloController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(HelloController.class);
 
     @GetMapping(value = "/hello/{name}", produces = MediaType.TEXT_PLAIN_VALUE)
     public @ResponseBody String hello(@PathVariable("name") String name) {
+        LOGGER.info("Should say hello to " + name + "...");
         return "Hello " + name;
     }
 }
